@@ -1,0 +1,11 @@
+# Managed by puppet
+# IMPORTANT: if you you need to modify something in this file,
+# you will need to modify it in hieradata.  If you are unable
+# to set what you need with hieradata, reach out to the puppet dev team
+# to inquire about adding your custom option.
+
+export http_proxy='<%= @http_proxy %>'
+export https_proxy='<%= @https_proxy %>'
+<% unless @no_proxy.nil? -%>
+export no_proxy=<%= @no_proxy %>
+<% end -%>
